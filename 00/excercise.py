@@ -38,3 +38,25 @@ for vertex in matrix:
     if degree == mostEdges:
         print('Adjacent vertices of vertex ' + str(index) + ': ' + str(adjacenVertives))
     index += 1;
+
+# displaying edges
+edges = []
+index = 0
+for vertex in matrix:
+    index1 = 0
+    for edge in vertex:
+        edgeArr = []
+        if edge == 1:
+            edgeArr.append(index)
+            edgeArr.append(index1)
+        if edgeArr:
+            edges.append(edgeArr)
+        index1 += 1
+    edgeArr = []
+    index += 1
+for edge in edges:
+    for edge1 in edges:
+        if edge == edge1:
+            edges.remove(edge)
+print('Edges in matrix')
+print(edges)

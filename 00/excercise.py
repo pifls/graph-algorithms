@@ -65,3 +65,18 @@ for edge in edges:
 edges = unique
 print('Edges:')
 print(edges)
+
+incidence_matrix = []
+index = 0
+for vertex in matrix:
+    inner_matrix = []
+    for edge in edges:
+        if edge[0] == index or edge[1] == index:
+            inner_matrix.append(1)
+        else:
+            inner_matrix.append(0)
+    incidence_matrix.append(inner_matrix)
+    index += 1
+print('Incidence matrix:')
+for x in incidence_matrix:
+    print(x)

@@ -54,9 +54,14 @@ for vertex in matrix:
         index1 += 1
     edgeArr = []
     index += 1
+
+seen = set()
+unique = []
 for edge in edges:
-    for edge1 in edges:
-        if edge == edge1:
-            edges.remove(edge)
-print('Edges in matrix')
+    srtd = tuple(sorted(edge))
+    if srtd not in seen:
+            unique.append(edge)
+            seen.add(srtd)
+edges = unique
+print('Edges:')
 print(edges)

@@ -66,6 +66,7 @@ edges = unique
 print('Edges:')
 print(edges)
 
+# displaying incidence matrix
 incidence_matrix = []
 index = 0
 for vertex in matrix:
@@ -80,3 +81,17 @@ for vertex in matrix:
 print('Incidence matrix:')
 for x in incidence_matrix:
     print(x)
+
+# displaying adjacent vertices for every vertex
+index = 0
+for vertex in matrix:
+    adjacenVertives = []
+    adjacentVertex = 0
+    degree = 0
+    for edge in vertex:
+        if edge == 1:
+            degree += 1
+            adjacenVertives.append(adjacentVertex)
+        adjacentVertex += 1
+    print('Adjacent vertices of vertex ' + str(index) + ': ' + str(adjacenVertives))
+    index += 1;

@@ -7,6 +7,16 @@ if f.mode == "r":
         inner_matrix = []
         for char in vertex:
             if char=='0' or char=='1':
-                num = int(char)
-                inner_matrix.append(num)
+                edge = int(char)
+                inner_matrix.append(edge)
         matrix.append(inner_matrix)
+        
+# displaying degree of vertices 
+index  = 0
+for vertex in matrix:
+    degree = 0
+    for edge in vertex:
+        if edge == 1:
+            degree += 1
+    print('Degree of vertex ' + str(index) + ': ' + str(degree))
+    index += 1;
